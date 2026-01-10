@@ -1,0 +1,68 @@
+document.addEventListener("DOMContentLoaded", () => {
+
+    /* MENU */
+    const toggle = document.querySelector(".menu-toggle");
+    const menu = document.querySelector(".menu");
+
+    toggle.addEventListener("click", () => {
+        menu.classList.toggle("active");
+    });
+
+    /* IDIOMAS */
+    const translations = {
+        pt: {
+            page_title: "Hospedagem | Marau Dance Festival",
+            menu_home: "Página Inicial",
+            menu_packages: "Pacotes",
+            menu_artists: "Artistas",
+            menu_schedule: "Programação",
+            menu_gallery: "Galeria",
+            menu_location: "Como Chegar",
+            title: "Onde se Hospedar",
+            subtitle: "Pacote – 05 Noites",
+            "footer.text": "© Marau Dance Festival - Todos os direitos reservados. By Newton Pohsner."
+        },
+        en: {
+            page_title: "Accommodation | Marau Dance Festival",
+            menu_home: "Home",
+            menu_packages: "Packages",
+            menu_artists: "Artists",
+            menu_schedule: "Schedule",
+            menu_gallery: "Gallery",
+            menu_location: "How to Get There",
+            title: "Where to Stay",
+            subtitle: "Package – 5 Nights",
+            "footer.text": "© Marau Dance Festival - All rights reserved. By Newton Pohsner."
+        },
+        es: {
+            page_title: "Alojamiento | Marau Dance Festival",
+            menu_home: "Inicio",
+            menu_packages: "Paquetes",
+            menu_artists: "Artistas",
+            menu_schedule: "Programación",
+            menu_gallery: "Galería",
+            menu_location: "Cómo Llegar",
+            title: "Dónde Alojarse",
+            subtitle: "Paquete – 5 Noches",
+            "footer.text": "© Festival de Danza Marau - Todos los derechos reservados. Por Newton Pohsner."
+        }
+    };
+
+    function setLang(lang) {
+        document.querySelectorAll("[data-i18n]").forEach(el => {
+            el.textContent = translations[lang][el.dataset.i18n];
+        });
+
+        document.title = translations[lang].page_title;
+        localStorage.setItem("lang", lang);
+
+        document.querySelectorAll(".lang-btn").forEach(b => b.classList.remove("active"));
+        document.querySelector(`.lang-btn[data-lang="${lang}"]`).classList.add("active");
+    }
+
+    document.querySelectorAll(".lang-btn").forEach(btn => {
+        btn.addEventListener("click", () => setLang(btn.dataset.lang));
+    });
+
+    setLang(localStorage.getItem("lang") || "pt");
+});

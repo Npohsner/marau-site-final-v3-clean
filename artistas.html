@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Artistas</title>
+
+    <link rel="shortcut icon" href="imagens/teste/mdf.ico">
+    <link rel="stylesheet" href="css/styleArtistas.css">
+</head>
+
+<body>
+
+<header>
+    
+
+    <div class="logo">
+        <img src="imagens/maraú02.png" alt="Logo Maraú Festival">
+    </div>
+<!-- BOTÃO TROCA DE LINGUAGEM - BANDEIRAS -->
+    <div class="lang-switch">
+    <button class="lang-btn active" data-lang="pt" aria-label="Português">
+        <img src="imagens/teste/bandeira BRASIL.png" alt="Português">
+    </button>
+
+    <button class="lang-btn" data-lang="en" aria-label="English">
+        <img src="imagens/teste/bandeira USA.png" alt="English">
+    </button>
+
+    <button class="lang-btn" data-lang="es" aria-label="Español">
+        <img src="imagens/teste/bandeira espanha.png" alt="Español">
+    </button>
+</div>
+    <!-- BOTÃO HAMBÚRGUER -->
+    <button class="menu-toggle" aria-label="Abrir menu">
+        <span></span>
+        <span></span>
+        <span></span>
+    </button>
+
+    <!-- MENU -->
+   <nav class="menu">
+    <a href="index.html" data-i18n="menu.home">Página Inicial</a>
+    <a href="pacotes.html" data-i18n="menu.packages">Pacotes</a>
+    <a href="hospedagem.html" data-i18n="menu.accommodation">Hospedagem</a>
+    <a href="galeria.html" data-i18n="menu.gallery">Galeria</a>
+    <a href="programacao.html" data-i18n="menu.schedule">Programação</a>
+    <a href="comoChegar.html" data-i18n="menu.howToGet">Como Chegar</a>
+</nav>
+</header>
+
+<main>
+
+<h1 data-i18n="artists.title">ARTISTAS</h1>
+<div class="artista">
+    <img src="imagens/professores/MDF_PERFIS 2026 liras.png" alt="Liras">
+    <img src="imagens/professores/MDF_PERFIS 2026 didi e patricia.png" alt="Didi e Patrícia">
+    <img src="imagens/professores/MDF_PERFIS 2026 braz.png" alt="Braz">
+    <img src="imagens/professores/BERG E BELLA.png">
+    <img src="imagens/professores/MDF_PERFIS 2026 IRLA.png" alt="Irla">
+    <img src="imagens/professores/MDF_PERFIS 2026 IAGO E VANESSA.png" alt="Iago e Vanessa">
+    <img src="imagens/professores/MDF_PERFIS 2026 keu e marilia.png" alt="Keu e Marilia">
+    <img src="imagens/professores/MDF_PERFIS 2026 RAU E ISA.png" alt="Rau e Isa">
+    <img src="imagens/professores/MDF_PERFIS 2026 ricardo e larissa.png" alt="Ricardo e Larissa">
+    <img src="imagens/professores/MDF_PERFIS 2026 val e vanessa.png" alt="Val e Vanessa">
+    <img src="imagens/professores/MDF_PERFIS 2026 vini e carol.png" alt="Vini e Carol">
+</div>
+
+<h1 data-i18n="djs.title">DJ´s</h1>
+<div class="artista">
+    <img src="imagens/professores/dj edu.png" alt="DJ Edu">
+    <img src="imagens/professores/dj MATTER.png" alt="DJ Matter">
+    <img src="imagens/professores/dj raffro.png" alt="DJ Raffro">
+    <img src="imagens/professores/dj val.png" alt="DJ Val">
+    <img src="imagens/professores/dj ZE DO LAGOO.png" alt="DJ Zé do Lagoo">
+    <img src="imagens/professores/dj ginga.png" alt="DJ Ginga">
+    <img src="imagens/professores/dj martin.png" alt="DJ Martin">
+</div>
+
+<h1 data-i18n="videomaker.title">VIDEOMAKER</h1>
+<div class="artista artista-centro">
+    <img src="imagens/professores/MDF_PERFIS 2026 indyo.png" alt="Indyo Films">
+</div>
+
+<h1 data-i18n="organization.title">ORGANIZAÇÃO</h1>
+<div class="artista artista-centro">
+    <img src="imagens/professores/MDF_PERFIS 2026 organizadoras.png" alt="Organização do evento">
+</div>
+
+<div class="Patrocinio">
+    <img src="imagens/professores/Patrocinador.png" alt="Patrocinadores">
+</div>
+
+</main>
+
+<footer>
+    <span data-i18n="footer.text">
+        © Marau Dance Festival - Todos os direitos reservados. By Newton Pohsner.
+    </span>
+</footer> 
+
+<!-- LIGHTBOX -->
+<div class="lightbox" id="lightbox">
+    <span class="close">&times;</span>
+    <img class="lightbox-img" id="lightbox-img" alt="">
+</div>
+
+<!-- JS -->
+<script>
+    /* MENU */
+    const toggle = document.querySelector('.menu-toggle');
+    const menu = document.querySelector('.menu');
+
+    toggle.addEventListener('click', () => {
+        menu.classList.toggle('active');
+        toggle.classList.toggle('active');
+    });
+
+    /* LIGHTBOX */
+    const images = document.querySelectorAll('.artista img');
+    const lightbox = document.getElementById('lightbox');
+    const lightboxImg = document.getElementById('lightbox-img');
+    const close = document.querySelector('.close');
+
+    images.forEach(img => {
+        img.addEventListener('click', () => {
+            lightbox.classList.add('show');
+            lightboxImg.src = img.src;
+            lightboxImg.alt = img.alt || 'Imagem ampliada';
+        });
+    });
+
+    close.addEventListener('click', () => lightbox.classList.remove('show'));
+
+    lightbox.addEventListener('click', e => {
+        if (e.target !== lightboxImg) {
+            lightbox.classList.remove('show');
+        }
+    });
+
+    document.addEventListener('keydown', e => {
+        if (e.key === 'Escape') {
+            lightbox.classList.remove('show');
+        }
+    });
+</script>
+
+<script>
+const buttons = document.querySelectorAll('.lang-btn');
+
+buttons.forEach(btn => {
+    btn.addEventListener('click', () => {
+
+        // remove ativo de todos
+        buttons.forEach(b => b.classList.remove('active'));
+
+        // ativa o clicado
+        btn.classList.add('active');
+
+        // idioma selecionado
+        const lang = btn.dataset.lang;
+
+        // aqui você chama sua função de tradução
+        setLanguage(lang);
+    });
+});
+</script>
+
+<script src="js/lang.js"></script>
+
+</body>
+
+</html>

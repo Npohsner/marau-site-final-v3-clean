@@ -1,0 +1,346 @@
+/* =========================
+   RESET
+========================= */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html, body {
+    width: 100%;
+    overflow-x: hidden;
+}
+
+/* =========================
+   BODY / FUNDO
+========================= */
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    text-align: center;
+    color: #fff;
+
+    background:
+        linear-gradient(
+            to bottom,
+            rgba(255, 193, 7, 0.85),
+            rgba(255, 87, 34, 0.85),
+            rgba(0, 188, 212, 0.85)
+        ),
+        url("../imagens/background-praia.jpg");
+
+    background-size: cover;
+    background-position: center;
+    /* FIX iOS: NÃO usar fixed */
+    background-attachment: scroll;
+}
+
+/* =========================
+   LOGO
+========================= */
+.logo {
+    width: 100%;
+    padding: 25px 0;
+    background: linear-gradient(135deg, #ff9800, #ff4081);
+}
+
+.logo img {
+    width: 90%;
+    max-width: 420px;
+    display: block;
+    margin: auto;
+    filter: drop-shadow(0 6px 12px rgba(0,0,0,0.4));
+}
+
+/* =========================
+   IDIOMAS
+========================= */
+.lang-switch {
+    display: flex;
+    justify-content: center;
+    gap: 14px;
+    margin: 16px 0;
+}
+
+.lang-btn {
+    width: 46px;
+    height: 32px;
+    border: 2px solid transparent;
+    border-radius: 8px;
+    padding: 0;
+    background: none;
+    cursor: pointer;
+    overflow: hidden;
+    transition: 0.25s;
+}
+
+.lang-btn img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.lang-btn:hover {
+    transform: scale(1.08);
+}
+
+.lang-btn.active {
+    border-color: #00bcd4;
+    box-shadow: 0 0 0 2px rgba(0,188,212,0.6);
+}
+
+/* =========================
+   MENU
+========================= */
+.menu-toggle {
+    display: none;
+    background: none;
+    border: none;
+    cursor: pointer;
+    margin: 12px auto;
+}
+
+.menu-toggle span {
+    display: block;
+    width: 30px;
+    height: 4px;
+    background: orangered;
+    margin: 6px 0;
+    border-radius: 4px;
+    transition: 0.3s;
+}
+
+/* ANIMAÇÃO DO HAMBÚRGUER */
+.menu-toggle.active span:nth-child(1) {
+    transform: rotate(45deg) translate(6px, 6px);
+}
+.menu-toggle.active span:nth-child(2) {
+    opacity: 0;
+}
+.menu-toggle.active span:nth-child(3) {
+    transform: rotate(-45deg) translate(6px, -6px);
+}
+
+/* MENU LINKS */
+.menu {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    flex-wrap: wrap;
+    margin: 16px 0;
+}
+
+.menu a {
+    background-color: orangered;
+    color: rgb(136, 208, 250);
+    padding: 10px 14px;
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.menu a:hover {
+    background-color: rgb(136, 208, 250);
+    color: orangered;
+}
+
+/* =========================
+   CONTEÚDO
+========================= */
+main {
+    padding: 35px 15px 60px;
+}
+
+h1 {
+    color: orangered;
+    margin-bottom: 10px;
+}
+
+h2 {
+    margin: 20px 0;
+}
+
+/* =========================
+   VÍDEOS (GRID)
+========================= */
+.videos {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+    max-width: 1000px;
+    margin: 30px auto;
+    padding: 0 15px;
+}
+
+.videos video {
+    width: 100%;
+    aspect-ratio: 16 / 9;
+    object-fit: contain;
+    background: black;
+
+    border-radius: 14px;
+    box-shadow: 0 8px 22px rgba(0,0,0,0.45);
+    transition: transform 0.3s ease;
+
+    /* FIX iOS */
+    touch-action: manipulation;
+}
+
+/* Hover só no desktop */
+@media (hover: hover) {
+    .videos video:hover {
+        transform: scale(1.04);
+        cursor: pointer;
+    }
+}
+
+/* =========================
+   VÍDEO MÚSICA – DESTAQUE
+========================= */
+.videos-musica {
+    display: flex;
+    justify-content: center;
+    margin: 40px auto;
+    padding: 0 15px;
+}
+
+.videos-musica video {
+    width: 60%;
+    max-width: 1100px;
+    aspect-ratio: 16 / 9;
+    object-fit: contain;
+    background: black;
+
+    border-radius: 14px;
+    box-shadow: 0 8px 22px rgba(0,0,0,0.45);
+    transition: transform 0.3s ease;
+
+    /* FIX iOS */
+    touch-action: manipulation;
+}
+
+/* Hover só no desktop */
+@media (hover: hover) {
+    .videos-musica video:hover {
+        transform: scale(1.04);
+        cursor: pointer;
+    }
+}
+
+/* =========================
+   FOTOS
+========================= */
+.fotos {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    flex-wrap: wrap;
+    margin: 40px 0;
+}
+
+.foto-card img {
+    width: 280px;
+    border-radius: 14px;
+    box-shadow: 0 6px 18px rgba(0,0,0,0.45);
+}
+
+/* =========================
+   PATROCÍNIO
+========================= */
+.Patrocinio img {
+    width: 100%;
+    max-width: 1200px;
+    margin: 40px auto;
+    filter: drop-shadow(0 6px 14px rgba(0,0,0,0.3));
+}
+
+/* =========================
+   FOOTER
+========================= */
+footer {
+    background: linear-gradient(to right, #00bcd4, #4dd0e1);
+    color: #004d40;
+    text-align: center;
+    font-weight: bold;
+    padding: 12px 8px;
+    font-size: 14px;
+    line-height: 1.3;
+    width: 100%;
+}
+
+footer span {
+    display: inline;
+}
+
+/* =========================
+   RESPONSIVO
+========================= */
+@media (max-width: 768px) {
+
+    .menu-toggle {
+        display: block;
+    }
+
+    .menu {
+        display: none;
+        flex-direction: column;
+        background: linear-gradient(to bottom, #ff9800, #ff5722);
+        padding: 20px 0;
+        position: relative;
+        z-index: 40;
+    }
+
+    .menu.active {
+        display: flex;
+    }
+
+    .menu a {
+        width: 90%;
+        margin: auto;
+        text-align: center;
+    }
+
+    .videos-musica video {
+        width: 100%;
+    }
+}
+
+@media (max-width: 480px) {
+    footer {
+        padding: 8px 6px;
+        font-size: 8px;
+        line-height: 1.2;
+    }
+}
+
+/* =========================
+   MODAL FULLSCREEN
+========================= */
+.video-modal {
+    display: none; /* escondido por padrão */
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,0.85);
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+}
+
+.video-modal video {
+    max-width: 90%;
+    max-height: 90%;
+    border-radius: 14px;
+}
+.video-modal .close {
+    position: absolute;
+    top: 20px;
+    right: 30px;
+    font-size: 36px;
+    color: #fff;
+    cursor: pointer;
+    z-index: 1001;
+}

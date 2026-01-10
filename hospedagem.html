@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pacotes | Marau Dance Festival</title>
+
+    <link rel="shortcut icon" href="imagens/teste/mdf.ico">
+    <link rel="stylesheet" href="css/hospedagem.css">
+</head>
+
+<body>
+
+<header>
+    <div class="logo">
+        <img src="imagens/maraú02.png" alt="Marau Dance Festival">
+    </div>
+
+    <!-- IDIOMAS (PADRÃO lang-btn) -->
+   <div class="lang-switch">
+    <button class="lang-btn active" data-lang="pt">
+        <img src="imagens/teste/bandeira BRASIL.png" alt="Português">
+    </button>
+
+    <button class="lang-btn" data-lang="en">
+        <img src="imagens/teste/bandeira USA.png" alt="English">
+    </button>
+
+    <button class="lang-btn" data-lang="es">
+        <img src="imagens/teste/bandeira espanha.png" alt="Español">
+    </button>
+</div>
+
+    <!-- BOTÃO HAMBÚRGUER -->
+    <button class="menu-toggle" aria-label="Abrir menu">
+        <span></span>
+        <span></span>
+        <span></span>
+    </button>
+
+    <!-- MENU -->
+   <nav class="menu">
+    <a href="index.html" data-i18n="menu_home">Página Inicial</a>
+    <a href="artistas.html" data-i18n="menu_artistas">Artistas</a>
+    <a href="hospedagem.html" data-i18n="menu_hospedagem">Hospedagem</a>
+    <a href="galeria.html" data-i18n="menu_galeria">Galeria</a>
+    <a href="programacao.html" data-i18n="menu_programacao">Programação</a>
+    <a href="comoChegar.html" data-i18n="menu_como_chegar">Como Chegar</a>
+</nav>
+</header>
+
+<main>
+
+    <h1 data-i18n="title">Onde se Hospedar</h1>
+    <h2 data-i18n="subtitle">Pacote – 05 Noites</h2>
+
+    <section class="pousadas">
+
+        <div class="card">
+            <img src="fotos/Pousadas/MDF_ACOMODAÇÕES_01.jpg">
+        </div>
+
+        <div class="card">
+            <img src="fotos/Pousadas/MDF_ACOMODAÇÕES_02.jpg">
+            <img class="overlay" src="imagens/esgotado.jpeg">
+        </div>
+
+        <div class="card">
+            <img src="fotos/Pousadas/MDF_ACOMODAÇÕES_03.jpg">
+            <img class="overlay" src="imagens/esgotado.jpeg">
+        </div>
+
+        <div class="card">
+            <img src="fotos/Pousadas/MDF_ACOMODAÇÕES_04.jpg">
+        </div>
+
+        <div class="card">
+            <img src="fotos/Pousadas/MDF_ACOMODAÇÕES_05.jpg">
+        </div>
+
+    </section>
+
+    <div class="Patrocinio">
+        <img src="imagens/professores/Patrocinador.png" alt="Patrocinadores">
+    </div>
+
+</main>
+
+<footer>
+    <span data-i18n="footer.text">
+        © Marau Dance Festival - Todos os direitos reservados. By Newton Pohsner.
+    </span>
+</footer> 
+
+<!-- LIGHTBOX -->
+<div class="lightbox" id="lightbox">
+    <span class="close">&times;</span>
+
+    <div class="lightbox-content">
+        <img class="lightbox-img" id="lightbox-img">
+        <img class="lightbox-overlay" id="lightbox-overlay">
+    </div>
+</div>
+
+<script src="js/pacotes.js"></script>
+
+
+
+</body>
+</html>

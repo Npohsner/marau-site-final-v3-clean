@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Como Chegar | Marau Dance Festival</title>
+
+    <link rel="shortcut icon" type="image/png" href="imagens/teste/mdf.ico">
+    <link rel="stylesheet" href="css/comoChegar.css">
+</head>
+
+<body>
+
+    <!-- LOGO -->
+    <header class="logo">
+        <img src="imagens/maraú02.png" alt="Marau Dance Festival">
+    </header>
+
+<!-- IDIOMAS -->
+    <div class="lang-switch">
+        <button class="lang-btn" data-lang="pt" aria-label="Português">
+            <img src="imagens/teste/bandeira BRASIL.png" alt="Português">
+        </button>
+
+        <button class="lang-btn" data-lang="en" aria-label="English">
+            <img src="imagens/teste/bandeira USA.png" alt="English">
+        </button>
+
+        <button class="lang-btn" data-lang="es" aria-label="Español">
+            <img src="imagens/teste/bandeira espanha.png" alt="Español">
+        </button>
+    </div>
+
+        <!-- HAMBÚRGUER -->
+    <button class="menu-toggle" aria-label="Abrir menu">
+        <span></span>
+        <span></span>
+        <span></span>
+    </button>
+
+
+    <!-- MENU -->
+    <nav class="menu">
+        <a href="index.html" data-i18n="menu_home">Inicio</a>
+        <a href="pacotes.html" data-i18n="menu_packages">Pacotes</a>
+        <a href="artistas.html" data-i18n="menu_artists">Artistas</a>
+        <a href="hospedagem.html" data-i18n="menu_host">Alojamento</a>
+        <a href="galeria.html" data-i18n="menu_gallery">Galeria</a>
+        <a href="programacao.html" data-i18n="menu_program">Programação</a>
+    </nav>
+
+    <!-- CONTEÚDO -->
+    <main>
+        <h1 data-i18n="title"></h1>
+        <h2 data-i18n="subtitle"></h2>
+
+        <section class="como-chegar-grid">
+            <img src="imagens/como chegar/MDF_COMO-CHEGAR_01.jpg" alt="">
+            <img src="imagens/como chegar/MDF_COMO-CHEGAR_02.jpg" alt="">
+            <img src="imagens/como chegar/MDF_COMO-CHEGAR_03.jpg" alt="">
+        </section>
+
+
+        <!-- PATROCÍNIO -->
+    <div class="Patrocinio">
+        <img src="imagens/professores/Patrocinador.png" alt="Patrocinadores">
+    </div>
+
+    </main>
+
+    <footer>
+            © Marau Dance Festival - Todos os direitos reservados. By Newton Pohsner.
+        </span>
+    </footer>
+
+
+    <!-- MODAL -->
+    <div class="image-modal" id="imageModal">
+        <span class="close">&times;</span>
+        <img id="modalImage">
+    </div>
+
+    <script src="js/menu.js"></script>
+
+    <script src="js/comoChegar.js"></script>
+</body>
+</html>

@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title data-i18n="page_title">Programação | Marau Dance Festival</title>
+
+    <link rel="shortcut icon" href="imagens/teste/mdf.ico" type="image/png">
+    <link rel="stylesheet" href="css/programacao.css">
+</head>
+
+<body>
+
+<header class="header">
+
+    <!-- LOGO -->
+    <div class="logo">
+        <img src="imagens/maraú02.png" alt="Marau Dance Festival">
+    </div>
+
+    <!-- IDIOMAS -->
+    <div class="lang-switch">
+        <button class="lang-btn active" data-lang="pt">
+            <img src="imagens/teste/bandeira BRASIL.png">
+        </button>
+        <button class="lang-btn" data-lang="en">
+            <img src="imagens/teste/bandeira USA.png">
+        </button>
+        <button class="lang-btn" data-lang="es">
+            <img src="imagens/teste/bandeira espanha.png">
+        </button>
+    </div>
+
+    <!-- HAMBÚRGUER -->
+    <button class="menu-toggle" aria-label="Abrir menu">
+        <span></span>
+        <span></span>
+        <span></span>
+    </button>
+
+    <!-- MENU -->
+    <nav class="menu">
+        <a href="index.html" data-i18n="menu_home">Página Inicial</a>
+        <a href="pacotes.html" data-i18n="menu_packages">Pacotes</a>
+        <a href="artistas.html" data-i18n="menu_artists">Artistas</a>
+        <a href="hospedagem.html" data-i18n="menu_accommodation">Hospedagem</a>
+        <a href="galeria.html" data-i18n="menu_gallery">Galeria</a>
+        <a href="comoChegar.html" data-i18n="menu_location">Como Chegar</a>
+    </nav>
+
+</header>
+
+<main>
+
+    <h1 data-i18n="title">Programação Oficial</h1>
+
+    <!-- IMAGENS -->
+    <section class="programacao">
+        <img src="imagens/programação/2026/01Noite da Liberdade.jpg">
+        <img src="imagens/programação/2026/02Dupla Perfeita.jpg">
+        <img src="imagens/programação/2026/03Noite Tropical.jpg">
+        <img src="imagens/programação/2026/04Noite do Branco.jpg">
+        <img src="imagens/programação/2026/Festa no Barco.jpg">
+    </section>
+
+    <!-- TEXTO -->
+    <section class="descricao" data-i18n="description">
+        ✨ Uma experiência inesquecível espera por você ✨
+        <br><br>
+        No dia 01/02, embarque no majestoso Barco Diamante para um passeio exclusivo por 5 ilhas paradisíacas da
+        Península de Maraú.
+        <br><br>
+        Pocket show especial com o cantor paraense Felipe Cordeiro.
+        <br><br>
+        🌴 Música, dança, natureza e alegria.
+        <br><br>
+        🎟 Vagas ESGOTADAS.
+        <br><br>
+        <strong>Data:</strong> 01/02<br>
+        <strong>Embarque:</strong> 10:00h | <strong>Saída:</strong> 10:30h<br>
+        <strong>Retorno:</strong> 16:30h
+        <br><br>
+        Vamos juntos criar memórias inesquecíveis ⚓🛳
+    </section>
+
+<div class="Patrocinio">
+    <img src="imagens/professores/Patrocinador.png" alt="Patrocinadores">
+</div>
+
+
+</main>
+
+<footer>
+    <span data-i18n="footer.text">
+        © Marau Dance Festival - Todos os direitos reservados. By Newton Pohsner.
+    </span>
+</footer>
+
+<!-- LIGHTBOX -->
+<div class="lightbox" id="lightbox">
+    <span class="close">&times;</span>
+    <img id="lightbox-img">
+</div>
+
+<script src="js/menu.js"></script>
+
+<script src="js/programacao.js"></script>
+</body>
+</html>

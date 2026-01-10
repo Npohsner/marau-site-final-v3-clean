@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Marau Dance Festival</title>
+
+    <link rel="shortcut icon" href="imagens/teste/mdf.ico">
+
+    <!-- CSS GERAL DA PÁGINA -->
+    <link rel="stylesheet" href="css/teste.css">
+
+    <!-- CSS DO MENU (PADRÃO ARTISTAS) -->
+    <link rel="stylesheet" href="css/menu.css">
+</head>
+
+<body>
+
+<header>
+
+    <!-- LOGO -->
+    <div class="logo">
+        <img src="imagens/maraú02.png" alt="Marau Dance Festival">
+    </div>
+
+    <!-- IDIOMAS -->
+    <div class="lang-switch">
+        <button class="lang-btn" data-lang="pt" aria-label="Português">
+            <img src="imagens/teste/bandeira BRASIL.png" alt="Português">
+        </button>
+
+        <button class="lang-btn" data-lang="en" aria-label="English">
+            <img src="imagens/teste/bandeira USA.png" alt="English">
+        </button>
+
+        <button class="lang-btn" data-lang="es" aria-label="Español">
+            <img src="imagens/teste/bandeira espanha.png" alt="Español">
+        </button>
+    </div>
+
+    <!-- BOTÃO HAMBÚRGUER -->
+    <button class="menu-toggle" aria-label="Abrir menu">
+        <span></span>
+        <span></span>
+        <span></span>
+    </button>
+
+    <!-- MENU -->
+    <nav class="menu">
+        <a href="pacotes.html" data-i18n="menu.packages">Pacotes</a>
+        <a href="artistas.html" data-i18n="menu.artists">Artistas</a>
+        <a href="hospedagem.html" data-i18n="menu.accommodation">Hospedagem</a>
+        <a href="galeria.html" data-i18n="menu.gallery">Galeria</a>
+        <a href="programacao.html" data-i18n="menu.schedule">Programação</a>
+        <a href="comoChegar.html" data-i18n="menu.howToGet">Como Chegar</a>
+    </nav>
+
+</header>
+
+<main>
+
+    <h1 data-i18n="hero.line1">O início de uma nova era nos trouxe até aqui…</h1>
+    <h1 data-i18n="hero.line2">Agora, é hora de fazer história!</h1>
+    <h2 data-i18n="hero.date">29/01/2026 à 01/02/2026</h2>
+
+    <h3 data-i18n="hero.text">
+        Muito sol, muita Lambada e Zouk Brasileiro em um Paraíso Tropical!
+        Venha para o MARAÚ DANCE FESTIVAL
+    </h3>
+
+    <!-- VÍDEO -->
+    <section class="video-section">
+        <video controls>
+            <source src="video/AFTER 25 4K - SEM DATA (1).mp4" type="video/mp4">
+            Seu navegador não suporta vídeo.
+        </video>
+    </section>
+
+    <!-- LOCAL -->
+    <section class="location">
+        <h3>
+            <img src="imagens/teste/local evento marcação.png" alt="">
+            Rua Vasco Neto, nº 09 – Barra Grande – Maraú – Bahia – Brasil<br>
+            CEP: 45520-000
+        </h3>
+    </section>
+
+    <!-- REDES SOCIAIS -->
+    <section class="social">
+        <h3 data-i18n="social.title">Redes Sociais</h3>
+
+        <a href="https://www.youtube.com/@maraudancefestival" target="_blank">
+            <img src="imagens/teste/youtube.jpg" alt="YouTube">
+        </a>
+
+        <a href="https://www.instagram.com/maraudancefestival/" target="_blank">
+            <img src="imagens/teste/instagram.jpeg" alt="Instagram">
+        </a>
+    </section>
+
+    <!-- PATROCÍNIO -->
+    <div class="Patrocinio">
+        <img src="imagens/professores/Patrocinador.png" alt="Patrocinadores">
+    </div>
+
+</main>
+
+<footer>
+    <span data-i18n="footer.text">
+        © Marau Dance Festival - Todos os direitos reservados. By Newton Pohsner.
+    </span>
+</footer>
+
+<!-- JS MENU PADRÃO -->
+<script src="js/menu.js"></script>
+
+<!-- JS TRADUÇÃO -->
+<script src="js/lang.js"></script>
+
+<script>
+/* BOTÕES DE IDIOMA */
+const buttons = document.querySelectorAll('.lang-btn');
+
+buttons.forEach(btn => {
+    btn.addEventListener('click', () => {
+        buttons.forEach(b => b.classList.remove('active'));
+        btn.classList.add('active');
+        setLanguage(btn.dataset.lang);
+    });
+});
+</script>
+
+</body>
+</html>

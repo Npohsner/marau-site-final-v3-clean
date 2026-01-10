@@ -1,0 +1,263 @@
+/* RESET */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html, body {
+    width: 100%;
+    overflow-x: hidden;
+}
+
+/* BODY */
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    text-align: center;
+    color: #2b2b2b;
+
+    background:
+        linear-gradient(
+            to bottom,
+            rgba(255, 243, 176, 0.9),
+            rgba(255, 152, 0, 0.75),
+            rgba(77, 208, 225, 0.75)
+        ),
+        url("imagens/background-praia.jpg");
+
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+}
+
+/* LOGO */
+.logo {
+    width: 100%;
+    padding: 25px 0;
+    background: linear-gradient(135deg, #ff9800, #ff5722, #ff4081);
+}
+
+.logo img {
+    width: 90%;
+    max-width: 420px;
+    display: block;
+    margin: auto;
+    filter: drop-shadow(0 6px 12px rgba(0,0,0,0.35));
+}
+
+/* =========================
+   IDIOMAS
+========================= */
+.lang-switch {
+    display: flex;
+    justify-content: center;
+    gap: 14px;
+    margin: 16px 0;
+}
+
+.lang-btn {
+    width: 46px;
+    height: 32px;
+    border: 2px solid transparent;
+    border-radius: 8px;
+    padding: 0;
+    background: none;
+    cursor: pointer;
+    overflow: hidden;
+    transition: 0.25s;
+}
+
+.lang-btn img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.lang-btn:hover {
+    transform: scale(1.08);
+}
+
+.lang-btn.active {
+    border-color: #00bcd4;
+    box-shadow: 0 0 0 2px rgba(0,188,212,0.6);
+}
+
+/* ===== MENU ===== */
+.menu {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    flex-wrap: wrap;
+    margin: 16px 0;
+}
+
+.menu a {
+    background-color: orangered;
+    color: rgb(136, 208, 250);
+    padding: 10px 14px;
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+/* ===== BOTÃO HAMBÚRGUER ===== */
+.menu-toggle {
+    display: none;
+    background: none;
+    border: none;
+    cursor: pointer;
+    margin: 12px auto;
+    position: relative;
+    z-index: 50;
+}
+
+.menu-toggle span {
+    display: block;
+    width: 30px;
+    height: 4px;
+    background: orangered;
+    margin: 6px 0;
+    border-radius: 4px;
+}
+
+/* CONTEÚDO */
+main {
+    padding: 35px 15px;
+}
+
+h1 {
+    color: orangered;
+    margin-bottom: 8px;
+}
+
+h2 {
+    color: #fff;
+    margin-bottom: 30px;
+}
+
+/* GRID DE IMAGENS */
+.como-chegar-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 22px;
+    max-width: 1000px;
+    margin: auto;
+}
+
+.como-chegar-grid img {
+    width: 100%;
+    border-radius: 16px;
+    cursor: pointer;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.45);
+    transition: 0.3s;
+}
+
+.como-chegar-grid img:hover {
+    transform: scale(1.03);
+}
+
+/* MODAL FULLSCREEN */
+.image-modal {
+    position: fixed;
+    inset: 0;
+    background: rgba(0,0,0,0.95);
+    display: none;
+    align-items: center;
+    justify-content: center;
+    z-index: 9999;
+}
+
+.image-modal.show {
+    display: flex;
+}
+
+.image-modal img {
+    max-width: 92%;
+    max-height: 92%;
+    border-radius: 14px;
+    box-shadow: 0 0 40px rgba(255,255,255,0.25);
+}
+
+/* BOTÃO FECHAR */
+.image-modal .close {
+    position: absolute;
+    top: 25px;
+    right: 35px;
+    font-size: 42px;
+    font-weight: bold;
+    color: white;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.image-modal .close:hover {
+    color: #ff4081;
+}
+
+/* =========================
+   PATROCÍNIO
+========================= */
+.Patrocinio img {
+    width: 100%;
+    max-width: 1200px;
+    margin: 40px auto;
+    filter: drop-shadow(0 6px 14px rgba(0,0,0,0.3));
+}
+
+footer {
+    background: linear-gradient(
+        to right,
+        #00bcd4,
+        #4dd0e1
+    );
+    color: #004d40;
+    text-align: center;
+    font-weight: bold;
+    padding: 12px 8px;
+    font-size: 14px;
+    line-height: 1.3;
+
+    width: 100%;
+}
+
+footer span {
+    display: inline;
+    margin: 0;
+    padding: 0;
+}
+
+@media (max-width: 480px) {
+    footer {
+        padding: 8px 6px;
+        font-size: 8px;
+        line-height: 1.2;
+    }
+}
+
+/* RESPONSIVO */
+/* ===== MOBILE ===== */
+@media (max-width: 768px) {
+
+    .menu-toggle {
+        display: block;
+    }
+
+    .menu {
+        display: none;
+        flex-direction: column;
+        background: linear-gradient(to bottom, #ff9800, #ff5722);
+        padding: 20px 0;
+        position: relative;
+        z-index: 40;
+    }
+
+    .menu.active {
+        display: flex;
+    }
+
+    .menu a {
+        width: 90%;
+        margin: auto;
+        text-align: center;
+    }
+}

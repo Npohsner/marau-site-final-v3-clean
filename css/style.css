@@ -1,0 +1,351 @@
+/* =========================
+   RESET GLOBAL
+========================= */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html, body {
+    width: 100%;
+    overflow-x: hidden;
+}
+
+/* =========================
+   BODY
+========================= */
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: rgb(243, 226, 151);
+    color: #000;
+    text-align: center;
+}
+
+/* =========================
+   HEADER
+========================= */
+.header {
+    position: relative;
+    z-index: 1;
+}
+
+/* =========================
+   LOGO
+========================= */
+.logo {
+    width: 100%;
+    padding: 20px 0;
+    background: linear-gradient(to bottom, #ff9800, #ff5722);
+    pointer-events: none;
+
+}
+
+.logo img {
+    width: 90%;
+    max-width: 420px;
+    display: block;
+    margin: auto;
+    pointer-events: none;
+
+}
+
+/* =========================
+  IDIOMAS
+========================= */
+.lang-switch {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin: 12px 0;
+}
+
+.lang-btn {
+    width: 36px;
+    height: 24px;
+    border: none;
+    background: transparent;
+    border-radius: 6px;
+    cursor: pointer;
+    overflow: hidden;
+    transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.lang-btn img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+/* HOVER */
+.lang-btn:hover {
+    transform: scale(1.12);
+    box-shadow: 0 4px 10px rgba(0,0,0,0.35);
+}
+
+/* FOCO ACESSIBILIDADE */
+.lang-btn:focus-visible {
+    outline: 2px solid #000;
+    outline-offset: 2px;
+}
+
+/* IDIOMA ATIVO */
+.lang-btn.active {
+    box-shadow: 0 0 0 3px #00bcd4;
+    transform: scale(1.12);
+}
+
+/* MENU */
+.menu-toggle {
+    display: none;
+    background: none;
+    border: none;
+    cursor: pointer;
+    margin: 12px auto;
+}
+
+.menu-toggle span {
+    display: block;
+    width: 30px;
+    height: 4px;
+    background: orangered;
+    margin: 6px 0;
+    border-radius: 4px;
+    transition: 0.3s;
+}
+
+/* ANIMAÇÃO DO HAMBÚRGUER */
+.menu-toggle.active span:nth-child(1) {
+    transform: rotate(45deg) translate(6px, 6px);
+}
+.menu-toggle.active span:nth-child(2) {
+    opacity: 0;
+}
+.menu-toggle.active span:nth-child(3) {
+    transform: rotate(-45deg) translate(6px, -6px);
+}
+
+/* MENU LINKS */
+.menu {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    flex-wrap: wrap;
+    margin: 16px 0;
+}
+
+.menu a {
+    background-color: orangered;
+    color: rgb(136, 208, 250);
+    padding: 10px 14px;
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.menu a:hover {
+    background-color: rgb(136, 208, 250);
+    color: orangered;
+}
+
+/* =========================
+   TEXTOS HERO
+========================= */
+h1 {
+    color: orangered;
+    margin: 40px 10px 20px;
+    font-size: 1.8rem;
+}
+
+h2 {
+    margin-bottom: 20px;
+    font-size: 1.3rem;
+}
+
+h3 {
+    margin: 20px 15px;
+    font-size: 1.1rem;
+    font-weight: normal;
+}
+
+/* =========================
+   VÍDEO
+========================= */
+.video-section {
+    padding: 20px;
+}
+
+.video-section video {
+    width: 100%;
+    max-width: 800px;
+    border-radius: 12px;
+}
+
+/* =========================
+   LOCAL
+========================= */
+.location {
+    margin: 30px 15px;
+    font-size: 1rem;
+}
+
+.location img {
+    width: 20px;
+    vertical-align: middle;
+    margin-right: 6px;
+}
+
+/* =========================
+   REDES SOCIAIS
+========================= */
+.social {
+    margin: 30px 0;
+}
+
+.social img {
+    width: 40px;
+    margin: 8px;
+    transition: transform 0.3s;
+}
+
+.social img:hover {
+    transform: scale(1.1);
+}
+
+/* =========================
+   PATROCÍNIO
+========================= */
+.Patrocinio img {
+    width: 100%;
+    max-width: 1200px;
+    margin: 40px auto;
+}
+
+/* =========================
+   FOOTER
+========================= */
+footer {
+    margin-top: 40px;
+    padding: 15px;
+    background: rgba(0,0,0,0.1);
+    font-size: 0.9rem;
+}
+
+/* RESPONSIVO */
+@media (max-width: 900px) {
+    .artista {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 600px) {
+
+    .logo img {
+        max-height: 160px;
+    }
+
+    .menu-toggle {
+        display: block;
+    }
+
+    .menu {
+        display: none;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .menu.active {
+        display: flex;
+    }
+
+    .menu a {
+        width: 90%;
+    }
+
+    .artista {
+        grid-template-columns: 1fr;
+        justify-items: center;
+    }
+}
+
+/* =========================
+   CORREÇÃO DEFINITIVA MENU MOBILE
+   (igual à página Artistas)
+========================= */
+
+header {
+    position: relative;
+    z-index: 1000;
+}
+
+/* BOTÃO HAMBÚRGUER */
+.menu-toggle {
+    display: none;
+    background: none;
+    border: none;
+    cursor: pointer;
+    margin: 12px auto;
+    z-index: 2001;
+    position: relative;
+}
+
+.menu-toggle span {
+    display: block;
+    width: 30px;
+    height: 3px;
+    background: #000;
+    margin: 6px auto;
+    transition: 0.3s;
+}
+
+/* MENU */
+.menu {
+    display: flex;
+    justify-content: center;
+    gap: 12px;
+    margin: 16px 0;
+}
+
+/* MOBILE */
+@media (max-width: 768px) {
+
+    .menu-toggle {
+        display: block;
+    }
+
+    .menu {
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100%;
+        background: linear-gradient(to bottom, #ff9800, #ff5722);
+        flex-direction: column;
+        align-items: center;
+        gap: 14px;
+        padding: 20px 0;
+
+        /* começa fechado */
+        max-height: 0;
+        overflow: hidden;
+        transition: max-height 0.4s ease;
+        z-index: 2000;
+    }
+
+    .menu.active {
+        max-height: 500px; /* suficiente para todos os links */
+    }
+
+    .menu a {
+        width: 90%;
+        max-width: 300px;
+        text-align: center;
+        background: orangered;
+        color: #fff;
+        padding: 10px 16px;
+        border-radius: 6px;
+        font-weight: bold;
+        text-decoration: none;
+    }
+}
