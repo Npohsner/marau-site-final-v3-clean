@@ -12,7 +12,7 @@ const translations = {
         "hero.line1": "Em cada giro, um segredo… em cada conexão, um feitiço… a dança conduz aqueles que ousam atravessar para além do que os olhos podem ver.",
        // "hero.line2": "Agora, é hora de fazer história!",
         "hero.date": "28/01/2027 à 31/01/2027",
-        "hero.text": "Em um mundo onde o tempo se curva, o sol aquece os sonhos e a lambada encontra o zouk, nasce um paraíso feito para dançar... MARAÚ DANCE FESTIVAL",
+        "hero.text": "Em um mundo onde o tempo se curva, o sol aquece os sonhos e a lambada encontra o zouk, nasce um paraíso feito para dançar... MARAÚ DANCE FESTIVAL!!!",
 
         "social.title": "Redes Sociais",
         "artists.title": "ARTISTAS",
