@@ -12,14 +12,22 @@ document.addEventListener("DOMContentLoaded", () => {
             menu_accommodation: "Hospedagem",
             menu_schedule: "Programação",
             menu_location: "Como Chegar",
+
             title: "Galeria",
-            videos_title: "Vídeos 2025",
-            photos_title: "Fotos 2025",
-            video_musica: "Musica: Maraú me chamou",
+
+            videos_title: "Vídeos",
+            photos_title: "Fotos",
+
+            official_music: "Música Oficial",
+            video_musica: "Música: Maraú me chamou",
+            cantora: "AIYSHA COLKETT",
+
             balls: "Bailes",
             classes: "Aulas",
+
             "footer.text": "© Marau Dance Festival - Todos os direitos reservados. By Newton Pohsner."
         },
+
         en: {
             page_title: "Gallery | Marau Dance Festival",
             menu_home: "Home",
@@ -28,14 +36,22 @@ document.addEventListener("DOMContentLoaded", () => {
             menu_accommodation: "Accommodation",
             menu_schedule: "Schedule",
             menu_location: "How to Get There",
+
             title: "Gallery",
-            videos_title: "Videos 2025",
-            photos_title: "Photos 2025",
+
+            videos_title: "Videos",
+            photos_title: "Photos",
+
+            official_music: "Official Music",
             video_musica: "Music: Maraú me chamou",
+            cantora: "AIYSHA COLKETT",
+
             balls: "Parties",
             classes: "Classes",
+
             "footer.text": "© Marau Dance Festival - All rights reserved. By Newton Pohsner."
         },
+
         es: {
             page_title: "Galería | Marau Dance Festival",
             menu_home: "Inicio",
@@ -44,12 +60,19 @@ document.addEventListener("DOMContentLoaded", () => {
             menu_accommodation: "Alojamiento",
             menu_schedule: "Programación",
             menu_location: "Cómo Llegar",
+
             title: "Galería",
-            videos_title: "Videos 2025",
-            photos_title: "Fotos 2025",
-            video_musica: "Musica: Maraú me chamou",
+
+            videos_title: "Videos",
+            photos_title: "Fotos",
+
+            official_music: "Música Oficial",
+            video_musica: "Música: Maraú me chamou",
+            cantora: "AIYSHA COLKETT",
+
             balls: "Bailes",
             classes: "Clases",
+
             "footer.text": "© Marau Dance Festival - Todos los derechos reservados. By Newton Pohsner."
         }
     };
@@ -58,24 +81,32 @@ document.addEventListener("DOMContentLoaded", () => {
     const elements = document.querySelectorAll("[data-i18n]");
 
     function setLanguage(lang) {
+        const selectedLanguage = translations[lang] ? lang : "pt";
+
         elements.forEach(el => {
             const key = el.dataset.i18n;
-            if (translations[lang]?.[key]) {
-                el.textContent = translations[lang][key];
+
+            if (translations[selectedLanguage][key]) {
+                el.textContent = translations[selectedLanguage][key];
             }
         });
 
-        document.title = translations[lang].page_title;
+        document.title = translations[selectedLanguage].page_title;
 
         buttons.forEach(btn => btn.classList.remove("active"));
-        document.querySelector(`.lang-btn[data-lang="${lang}"]`)?.classList.add("active");
 
-        localStorage.setItem("language", lang);
+        document
+            .querySelector(`.lang-btn[data-lang="${selectedLanguage}"]`)
+            ?.classList.add("active");
+
+        localStorage.setItem("language", selectedLanguage);
     }
 
-    buttons.forEach(btn =>
-        btn.addEventListener("click", () => setLanguage(btn.dataset.lang))
-    );
+    buttons.forEach(btn => {
+        btn.addEventListener("click", () => {
+            setLanguage(btn.dataset.lang);
+        });
+    });
 
     setLanguage(localStorage.getItem("language") || "pt");
 
@@ -86,7 +117,8 @@ document.addEventListener("DOMContentLoaded", () => {
 
     if (!isMobile) {
 
-        document.querySelectorAll(".videos video, .videos-musica video")
+        document
+            .querySelectorAll(".videos video, .videos-musica video")
             .forEach(video => {
 
                 video.addEventListener("click", () => {

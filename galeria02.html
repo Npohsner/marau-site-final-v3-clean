@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title data-i18n="page_title">Galeria | Marau Dance Festival</title>
+
+    <link rel="shortcut icon" href="imagens/teste/mdf.ico" type="image/png">
+    <link rel="stylesheet" href="css/galeria.css">
+</head>
+
+<body>
+
+    <!-- LOGO -->
+    <header class="logo">
+        <img src="imagens/maraú02.png" alt="Marau Dance Festival">
+    </header>
+
+    <!-- IDIOMAS -->
+    <div class="lang-switch">
+        <button class="lang-btn" data-lang="pt" aria-label="Português">
+            <img src="imagens/teste/bandeira BRASIL.png" alt="Português">
+        </button>
+
+        <button class="lang-btn" data-lang="en" aria-label="English">
+            <img src="imagens/teste/bandeira USA.png" alt="English">
+        </button>
+
+        <button class="lang-btn" data-lang="es" aria-label="Español">
+            <img src="imagens/teste/bandeira espanha.png" alt="Español">
+        </button>
+    </div>
+
+        <!-- BOTÃO HAMBÚRGUER -->
+    <button class="menu-toggle" aria-label="Abrir menu">
+        <span></span>
+        <span></span>
+        <span></span>
+    </button>
+
+
+    <!-- MENU -->
+    <nav class="menu">
+        <a href="index.html" data-i18n="menu_home">Página Inicial</a>
+        <a href="pacotes.html" data-i18n="menu_packages">Pacotes</a>
+        <a href="artistas.html" data-i18n="menu_artists">Artistas</a>
+        <!-- <a href="hospedagem.html" data-i18n="menu_accommodation">Hospedagem</a> -->
+        <!-- <a href="programacao.html" data-i18n="menu_schedule">Programação</a> -->
+        <!-- <a href="comoChegar.html" data-i18n="menu_location">Como Chegar</a> -->
+    </nav>
+
+    <!-- CONTEÚDO -->
+    <main>
+
+        <h1 data-i18n="title">Galeria</h1>
+        <h2 data-i18n="videos_title">Vídeos 2025</h2>
+
+        <!-- VÍDEOS -->
+        <div class="videos">
+            <video controls preload="metadata" poster="imagens/video-thumb.jpg">
+                <source src="video/video01_ios.mp4" type="video/mp4">
+                Seu navegador não suporta vídeo.
+            </video>
+
+            <video controls preload="metadata" poster="imagens/video-thumb.jpg">
+                <source src="video/video02_ios.mp4" type="video/mp4">
+                Seu navegador não suporta vídeo.
+            </video>
+
+            <video controls preload="metadata" poster="imagens/video-thumb.jpg">
+                <source src="video/video03_ios.mp4" type="video/mp4">
+                Seu navegador não suporta vídeo.
+            </video>
+
+            <video controls preload="metadata" poster="imagens/video-thumb.jpg">
+                <source src="video/video04_ios.mp4" type="video/mp4">
+                Seu navegador não suporta vídeo.
+            </video>
+        </div>
+
+        <h2 data-i18n="video_musica">Musica: Maraú me chamou</h2>
+        <h3 data-i18n="cantora">AIYSHA COLKETT</h3>
+
+        <div class="videos-musica">
+            <video controls preload="metadata" poster="imagens/video-musica-thumb.jpg">
+                <source src="video/marauMeChama.mp4" type="video/mp4">
+                Seu navegador não suporta vídeo.
+            </video>
+        </div>
+
+        <!-- FOTOS -->
+        <h2 data-i18n="photos_title">Fotos 2025</h2>
+
+        <section class="fotos">
+            <div class="foto-card">
+                <h3 data-i18n="balls">Bailes</h3>
+                <a href="baileFotos.html">
+                    <img src="fotos/Bailes/61.jpg" alt="Bailes">
+                </a>
+            </div>
+
+            <div class="foto-card">
+                <h3 data-i18n="classes">Aulas</h3>
+                <a href="fotoAulas.html">
+                    <img src="fotos/Aulas/Aula_01.jpg" alt="Aulas">
+                </a>
+            </div>
+        </section>
+
+        <!-- PATROCÍNIO -->
+        <div class="Patrocinio">
+            <img src="fotos/2027/Patrocinadores/Rodape01.png" alt="Patrocinadores">
+        </div>
+
+    </main>
+
+    <!-- MODAL FULLSCREEN -->
+    <div class="video-modal" id="videoModal">
+        <span class="close">&times;</span>
+        <video id="modalVideo" controls></video>
+    </div>
+
+    <!-- FOOTER -->
+    <footer>
+        <span data-i18n="footer.text">
+            © Marau Dance Festival - Todos os direitos reservados. By Newton Pohsner.
+        </span>
+    </footer>
+
+    <!-- JS -->
+    <script src="js/menu.js"></script>
+    
+    <script src="js/galeria.js"></script>
+
+</body>
+</html>

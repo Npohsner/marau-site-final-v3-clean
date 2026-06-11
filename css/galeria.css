@@ -344,3 +344,95 @@ footer span {
     cursor: pointer;
     z-index: 1001;
 }
+
+
+
+
+
+
+/* =========================
+   GALERIA - EDIÇÕES
+========================= */
+.galeria-edicoes {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 30px;
+    max-width: 1100px;
+    margin: 40px auto;
+    padding: 0 15px;
+}
+
+.edicao-link {
+    text-decoration: none;
+    color: inherit;
+}
+
+.edicao-card {
+    background: rgba(255,255,255,0.18);
+    border-radius: 24px;
+    overflow: hidden;
+    box-shadow: 0 12px 30px rgba(0,0,0,0.35);
+    transition: 0.3s;
+}
+
+.edicao-card:hover {
+    transform: translateY(-7px);
+}
+
+.edicao-card img {
+    width: 100%;
+    height: 600px;
+    object-fit: cover;
+    display: block;
+}
+
+.edicao-conteudo {
+    padding: 22px 15px 26px;
+}
+
+.edicao-conteudo h2 {
+    color: #fff;
+    font-size: 28px;
+    margin-bottom: 10px;
+    text-shadow: 0 3px 8px rgba(0,0,0,0.35);
+}
+
+.edicao-conteudo p {
+    color: #fffbe6;
+    font-size: 17px;
+    font-weight: bold;
+}
+
+.musica-oficial {
+    max-width: 1100px;
+    margin: 50px auto 20px;
+    padding: 30px 15px;
+    border-radius: 24px;
+    background: rgba(255,255,255,0.16);
+    box-shadow: 0 12px 30px rgba(0,0,0,0.3);
+}
+
+@media (max-width: 768px) {
+    .galeria-edicoes {
+        grid-template-columns: 1fr;
+    }
+
+    .edicao-card img {
+        height: 230px;
+    }
+}
+
+
+
+.video-card {
+  width: 100%;
+  max-width: 900px;
+  margin: 30px auto;
+  aspect-ratio: 16 / 9;
+}
+
+.video-card iframe {
+  width: 100%;
+  height: 100%;
+  border-radius: 16px;
+}
