@@ -17,8 +17,8 @@ document.addEventListener("DOMContentLoaded", () => {
             menu_galeria: "Galeria",
             menu_programacao: "Programação",
             menu_como_chegar: "Como Chegar",
-            titulo_pacotes: "Pacotes Marau Dance Festival 2026",
-            validade: "Disponível até 28 de Janeiro de 2026",
+            titulo_pacotes: "Pacotes Marau Dance Festival 2027",
+            validade: "Disponível até 24 de Setembro de 2026",
             "footer.text": "© Marau Dance Festival - Todos os direitos reservados. By Newton Pohsner.",
             title:" Onde se Hospedar",
             subtitle:" Pacote – 05 Noites"
@@ -30,8 +30,8 @@ document.addEventListener("DOMContentLoaded", () => {
             menu_galeria: "Gallery",
             menu_programacao: "Schedule",
             menu_como_chegar: "How to Get There",
-            titulo_pacotes: "Marau Dance Festival 2026 Packages",
-            validade: "Available until January 28, 2026",
+            titulo_pacotes: "Marau Dance Festival 2027 Packages",
+            validade: "Available until September 24, 2026",
             "footer.text": "© Marau Dance Festival - All rights reserved. By Newton Pohsner.",
             title:" Where to Stay",
             subtitle:" Package – 5 Nights"
@@ -43,8 +43,8 @@ document.addEventListener("DOMContentLoaded", () => {
             menu_galeria: "Galería",
             menu_programacao: "Programación",
             menu_como_chegar: "Cómo llegar",
-            titulo_pacotes: "Paquetes Marau Dance Festival 2026",
-            validade: "Disponible hasta el 28 de enero de 2026",
+            titulo_pacotes: "Paquetes Marau Dance Festival 2027",
+            validade: "Disponible hasta el 24 de Septiembre de 2026",
             "footer.text": "© Marau Dance Festival - Todos los derechos reservados. By Newton Pohsner.",
             title:" Dónde alojarse",
             subtitle:" Paquete – 5 Noches"
