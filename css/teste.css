@@ -163,7 +163,7 @@ h3 {
 /* =========================
    LOCAL
 ========================= */
-.local {
+.location {
     margin: 30px 15px;
     font-size: 1rem;
     color: #00695c;
@@ -187,11 +187,20 @@ h3 {
 /* =========================
    PATROCÍNIO
 ========================= */
+.Patrocinio {
+    width: 100%;
+    max-width: 1100px;
+    margin: 30px auto 25px;
+    padding: 10 15px;
+}
+
 .Patrocinio img {
     width: 100%;
-    max-width: 1200px;
-    margin: 40px auto;
-    filter: drop-shadow(0 6px 14px rgba(0,0,0,0.3));
+    max-height: 220px; /* ajuste aqui */
+    object-fit: cover;
+    display: block;
+    border-radius: 22px;
+    box-shadow: 0 8px 22px rgba(0,0,0,0.30);
 }
 
 /* =========================
@@ -224,6 +233,16 @@ footer {
 
     .menu a {
         width: 90%;
+        border-radius: 14px;
+    }
+
+     .Patrocinio {
+        max-width: 96%;
+        margin: 25px auto 18px;
+        padding: 0 8px;
+    }
+
+    .Patrocinio img {
         border-radius: 14px;
     }
 }
